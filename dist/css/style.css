@@ -4,6 +4,7 @@
   --neutral-dark-grayish-blue: hsl(230, 11%, 40%);
   --neutral-grayish-blue: hsl(231, 7%, 65%);
   --neutral-light-grayish-blue: hsl(207, 33%, 95%);
+  --menu-speed: 0.75s;
 }
 
 * {
@@ -27,6 +28,10 @@ h1 {
 a {
   text-decoration: none;
   color: inherit;
+}
+
+.menu-wrap {
+  display: none;
 }
 
 .container {
@@ -236,12 +241,16 @@ a {
 }
 
 @media only screen and (max-width: 460px) {
+  .menu-wrap {
+    display: block;
+  }
+
   .header-right {
     display: none;
   }
 
   .container {
-    grid-gap: 8rem;
+    grid-gap: 1rem;
   }
 
   .section-left h1 {
@@ -281,5 +290,10 @@ a {
     font-size: 1rem;
     width: 2.5rem;
     padding: 0.125rem 0;
+  }
+
+  .line {
+    width: 100%;
+    border: 0.3px solid var(--neutral-grayish-blue);
   }
 }
