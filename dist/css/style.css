@@ -223,6 +223,7 @@ a {
   }
 
   .section-right {
+    height: 40vh;
     display: flex;
     justify-content: flex-end;
     order: -1;
